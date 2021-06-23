@@ -1,4 +1,4 @@
-module github.com/bitrise-io/appcenter
+module github.com/electric-feel/appcenter
 
 go 1.12
 

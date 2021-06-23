@@ -3,8 +3,8 @@ package appcenter
 import (
 	"strings"
 
-	"github.com/bitrise-io/appcenter/client"
-	"github.com/bitrise-io/appcenter/model"
+	"github.com/electric-feel/appcenter/client"
+	"github.com/electric-feel/appcenter/model"
 )
 
 // ReleaseAPI ...
