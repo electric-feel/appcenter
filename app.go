@@ -40,7 +40,7 @@ func (a AppAPI) Groups(name string) (model.Group, error) {
 	return a.API.GetGroupByName(name, a.ReleaseOptions.App)
 }
 
-// All Groups...
+// AllGroups ...
 func (a AppAPI) AllGroups() ([]model.Group, error) {
 	return a.API.GetAllGroups(a.ReleaseOptions.App)
 }

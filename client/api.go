@@ -79,6 +79,7 @@ func (api API) GetGroupByName(groupName string, app model.App) (model.Group, err
 	return getResponse, err
 }
 
+// GetAllGroups ...
 func (api API) GetAllGroups(app model.App) ([]model.Group, error) {
 	var (
 		getURL = fmt.Sprintf("%s/v0.1/apps/%s/%s/distribution_groups", baseURL, app.Owner, app.AppName)
