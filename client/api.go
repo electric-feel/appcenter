@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/bitrise-io/appcenter/util"
+	"github.com/electric-feel/appcenter/util"
 
-	"github.com/bitrise-io/appcenter/model"
+	"github.com/electric-feel/appcenter/model"
 )
 
 const (
