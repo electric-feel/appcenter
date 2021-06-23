@@ -41,22 +41,8 @@ func (a AppAPI) Groups(name string) (model.Group, error) {
 }
 
 // All Groups...
-func (a App) AllGroups() ([]Group, error) {
-	var (
-		getURL = fmt.Sprintf("%s/v0.1/apps/%s/%s/distribution_groups", baseURL, a.owner, a.name)
-		getResponse []Group
-	)
-
-	statusCode, err := a.client.jsonRequest(http.MethodGet, getURL, nil, &getResponse)
-	if err != nil {
-		return []Group{}, err
-	}
-
-	if statusCode != http.StatusOK {
-		return []Group{}, fmt.Errorf("invalid status code: %d, url: %s, body: %v", statusCode, getURL, getResponse)
-	}
-
-	return getResponse, nil
+func (a AppAPI) AllGroups() ([]model.Group, error) {
+	return a.API.GetAllGroups(a.ReleaseOptions.App)
 }
 
 // Stores ...
